@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CajaPiuraMVP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9c-xs-c6w">
+                                <rect key="frame" x="107" y="473" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Siguiente"/>
+                                <connections>
+                                    <action selector="goToUsers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F9C-fI-g2j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHc-5e-zDX">
+                                <rect key="frame" x="30" y="91" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Alert"/>
+                                <connections>
+                                    <action selector="showMsg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QHH-4t-l7w"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e2D-e4-7j0" customClass="CustomKeyBoardView" customModule="CajaPiuraMVP" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="478" width="375" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zLa-3u-LxQ">
+                                <rect key="frame" x="163" y="301" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RSo-nD-hBl" customClass="CustomTextFieldView" customModule="CajaPiuraMVP" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="183" width="375" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdS-oL-4wY">
+                                <rect key="frame" x="140" y="91" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Token"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iH4-lA-08J">
+                                <rect key="frame" x="235" y="91" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Wizard"/>
+                                <connections>
+                                    <action selector="tapWizard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yLG-i8-5Gh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="zLa-3u-LxQ" id="Utf-Z7-ylG"/>
+                        <outlet property="keyBoardView" destination="e2D-e4-7j0" id="EvK-Zh-1Ac"/>
+                        <outlet property="textFieldView" destination="RSo-nD-hBl" id="D1S-iy-ZDC"/>
+                        <segue destination="BXn-JO-gfh" kind="presentation" identifier="goToUsers" id="Ih2-hY-2wO"/>
+                        <segue destination="gG7-Ew-Byz" kind="show" identifier="goToWizard" id="HUI-3t-xaG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-185" y="78"/>
+        </scene>
+        <!--PeopleViewController-->
+        <scene sceneID="GIM-gZ-peh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Users" referencedIdentifier="PeopleViewController" id="BXn-JO-gfh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T43-4K-KDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14" y="463"/>
+        </scene>
+        <!--Wizard Step View Controller-->
+        <scene sceneID="Ud0-td-EWx">
+            <objects>
+                <viewController id="gG7-Ew-Byz" customClass="WizardStepViewController" customModule="CajaPiuraMVP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gpe-KK-CC6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BB-0D-tLi" customClass="WizardSteps" customModule="CajaPiuraMVP" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55" width="375" height="81"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="OfW-VS-mA9"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghJ-mf-MnE">
+                                <rect key="frame" x="171" y="528" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextStep:" destination="gG7-Ew-Byz" eventType="touchUpInside" id="Gdv-n7-quW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wPT-Hf-zuO" firstAttribute="trailing" secondItem="2BB-0D-tLi" secondAttribute="trailing" id="9vF-hb-QId"/>
+                            <constraint firstItem="2BB-0D-tLi" firstAttribute="top" secondItem="wPT-Hf-zuO" secondAttribute="top" constant="35" id="J6A-lO-NRg"/>
+                            <constraint firstItem="2BB-0D-tLi" firstAttribute="centerX" secondItem="wPT-Hf-zuO" secondAttribute="centerX" id="ZPb-BW-ezP"/>
+                            <constraint firstItem="2BB-0D-tLi" firstAttribute="leading" secondItem="wPT-Hf-zuO" secondAttribute="leading" id="akS-Hm-Q1m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wPT-Hf-zuO"/>
+                    </view>
+                    <connections>
+                        <outlet property="wizardView" destination="2BB-0D-tLi" id="lRN-yw-5EH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o7z-4b-kXM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696.79999999999995" y="77.811094452773617"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WizardSteps" customModule="CajaPiuraMVP" customModuleProvider="target">
+            <connections>
+                <outlet property="line0" destination="cFc-xg-mla" id="3XR-tl-cwo"/>
+                <outlet property="line1" destination="bzD-Gp-dhc" id="gGn-uL-UsX"/>
+                <outlet property="line2" destination="pqV-QL-j16" id="mEn-yO-sbL"/>
+                <outlet property="stepView0" destination="0yi-r8-W9n" id="Gqi-ON-qfe"/>
+                <outlet property="stepView1" destination="CRx-rp-f8i" id="NeY-yT-dY1"/>
+                <outlet property="stepView2" destination="cNo-Ok-bbe" id="jQq-ky-uFh"/>
+                <outlet property="stepView3" destination="J27-bI-3Az" id="P5C-PB-n8S"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="81"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFc-xg-mla">
+                    <rect key="frame" x="62" y="44" width="51" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzD-Gp-dhc">
+                    <rect key="frame" x="155" y="43" width="51" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqV-QL-j16">
+                    <rect key="frame" x="241" y="43" width="51" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0yi-r8-W9n" customClass="CustomView" customModule="CajaPiuraMVP" customModuleProvider="target">
+                    <rect key="frame" x="16" y="20" width="48" height="48"/>
+                    <color key="backgroundColor" red="0.72315988026007494" green="1" blue="0.96248125823135589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Ao2-gl-nZc"/>
+                        <constraint firstAttribute="width" constant="48" id="syE-VE-97I"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CRx-rp-f8i" customClass="CustomView" customModule="CajaPiuraMVP" customModuleProvider="target">
+                    <rect key="frame" x="110" y="20" width="50" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.7231598803" green="1" blue="0.96248125819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNo-Ok-bbe" customClass="CustomView" customModule="CajaPiuraMVP" customModuleProvider="target">
+                    <rect key="frame" x="197" y="20" width="52" height="48"/>
+                    <color key="backgroundColor" red="0.7231598803" green="1" blue="0.96248125819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="52" id="lG8-Kt-i70"/>
+                        <constraint firstAttribute="height" constant="48" id="qCZ-Ox-Emt"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J27-bI-3Az" customClass="CustomView" customModule="CajaPiuraMVP" customModuleProvider="target">
+                    <rect key="frame" x="289" y="20" width="51" height="48"/>
+                    <color key="backgroundColor" red="0.7231598803" green="1" blue="0.96248125819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="mMf-Ju-dJ0"/>
+                        <constraint firstAttribute="width" constant="51" id="qSG-aS-Z1p"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="J27-bI-3Az" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="6GT-5n-KT9"/>
+                <constraint firstItem="0yi-r8-W9n" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Fbf-xg-kAS"/>
+                <constraint firstItem="J27-bI-3Az" firstAttribute="leading" secondItem="cNo-Ok-bbe" secondAttribute="trailing" constant="40" id="PgD-th-c7S"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="J27-bI-3Az" secondAttribute="trailing" constant="31" id="Zik-AS-90D"/>
+                <constraint firstItem="0yi-r8-W9n" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="dWn-gs-wNF"/>
+                <constraint firstItem="cNo-Ok-bbe" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="fJL-PM-RUa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="190" y="50"/>
+        </view>
+    </objects>
+</document>
