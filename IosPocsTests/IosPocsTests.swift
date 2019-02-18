@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import CajaPiuraMVP
+@testable import IosPocs
 
-class CajaPiuraMVPTests: XCTestCase {
+class IosPocsTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,16 +19,10 @@ class CajaPiuraMVPTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testTexfields(){
+        let customsTextFields = CustomTextFieldView()
+        let textfield0 = customsTextFields.textfield0
+        XCTAssertEqual(textfield0?.text?.count, 1, "Must have one character")
     }
 
 }

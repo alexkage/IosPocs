@@ -13,8 +13,8 @@
 		8528BC28220C884C00830E7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8528BC26220C884C00830E7D /* Main.storyboard */; };
 		8528BC2A220C884E00830E7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8528BC29220C884E00830E7D /* Assets.xcassets */; };
 		8528BC2D220C884E00830E7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8528BC2B220C884E00830E7D /* LaunchScreen.storyboard */; };
-		8528BC38220C884F00830E7D /* CajaPiuraMVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528BC37220C884F00830E7D /* CajaPiuraMVPTests.swift */; };
-		8528BC43220C884F00830E7D /* CajaPiuraMVPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528BC42220C884F00830E7D /* CajaPiuraMVPUITests.swift */; };
+		8528BC38220C884F00830E7D /* IosPocsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528BC37220C884F00830E7D /* IosPocsTests.swift */; };
+		8528BC43220C884F00830E7D /* IosPocsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528BC42220C884F00830E7D /* IosPocsUITests.swift */; };
 		8547D6EA220C972800A87D7A /* ApiCallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8547D6E9220C972800A87D7A /* ApiCallManager.swift */; };
 		8547D6ED220C979F00A87D7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8547D6EC220C979F00A87D7A /* Constants.swift */; };
 		8547D6EF220C9A9F00A87D7A /* PeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8547D6EE220C9A9F00A87D7A /* PeopleModel.swift */; };
@@ -76,10 +76,10 @@
 		8528BC2C220C884E00830E7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8528BC2E220C884E00830E7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8528BC33220C884F00830E7D /* IosPocsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IosPocsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8528BC37220C884F00830E7D /* CajaPiuraMVPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CajaPiuraMVPTests.swift; sourceTree = "<group>"; };
+		8528BC37220C884F00830E7D /* IosPocsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosPocsTests.swift; sourceTree = "<group>"; };
 		8528BC39220C884F00830E7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8528BC3E220C884F00830E7D /* IosPocsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IosPocsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8528BC42220C884F00830E7D /* CajaPiuraMVPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CajaPiuraMVPUITests.swift; sourceTree = "<group>"; };
+		8528BC42220C884F00830E7D /* IosPocsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosPocsUITests.swift; sourceTree = "<group>"; };
 		8528BC44220C884F00830E7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8547D6E9220C972800A87D7A /* ApiCallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallManager.swift; sourceTree = "<group>"; };
 		8547D6EC220C979F00A87D7A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 		8528BC36220C884F00830E7D /* IosPocsTests */ = {
 			isa = PBXGroup;
 			children = (
-				8528BC37220C884F00830E7D /* CajaPiuraMVPTests.swift */,
+				8528BC37220C884F00830E7D /* IosPocsTests.swift */,
 				8528BC39220C884F00830E7D /* Info.plist */,
 			);
 			path = IosPocsTests;
@@ -185,7 +185,7 @@
 		8528BC41220C884F00830E7D /* IosPocsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				8528BC42220C884F00830E7D /* CajaPiuraMVPUITests.swift */,
+				8528BC42220C884F00830E7D /* IosPocsUITests.swift */,
 				8528BC44220C884F00830E7D /* Info.plist */,
 			);
 			path = IosPocsUITests;
@@ -628,7 +628,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8528BC38220C884F00830E7D /* CajaPiuraMVPTests.swift in Sources */,
+				8528BC38220C884F00830E7D /* IosPocsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,7 +636,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8528BC43220C884F00830E7D /* CajaPiuraMVPUITests.swift in Sources */,
+				8528BC43220C884F00830E7D /* IosPocsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
