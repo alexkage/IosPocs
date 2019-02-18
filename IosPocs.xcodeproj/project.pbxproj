@@ -32,6 +32,13 @@
 		8547D716221234A300A87D7A /* PeopleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8547D715221234A300A87D7A /* PeopleRepository.swift */; };
 		8547D7182213399B00A87D7A /* PinUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8547D7172213399B00A87D7A /* PinUIButton.swift */; };
 		8547D71B2214674100A87D7A /* WebServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8547D71A2214674100A87D7A /* WebServicesManager.swift */; };
+		85C33752221B1F37002E5E7E /* WizardSteps.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85C33751221B1F37002E5E7E /* WizardSteps.xib */; };
+		85C3375A221B2065002E5E7E /* WizardStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C33759221B2065002E5E7E /* WizardStepViewController.swift */; };
+		85C3375C221B208D002E5E7E /* WizardSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3375B221B208D002E5E7E /* WizardSteps.swift */; };
+		85C33762221B20D5002E5E7E /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3375E221B20D5002E5E7E /* CustomButton.swift */; };
+		85C33763221B20D5002E5E7E /* CustomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3375F221B20D5002E5E7E /* CustomImage.swift */; };
+		85C33764221B20D5002E5E7E /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C33760221B20D5002E5E7E /* CustomView.swift */; };
+		85C33765221B20D5002E5E7E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C33761221B20D5002E5E7E /* CustomTextField.swift */; };
 		AC547BF9BD6DB305E3D72CB8 /* Pods_CajaPiuraMVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A822E1D69B4D5373AAF0473 /* Pods_CajaPiuraMVP.framework */; };
 		FAFFCD071D9ECCADE264C621 /* Pods_CajaPiuraMVPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08848B2E49742BB3BAB0B05B /* Pods_CajaPiuraMVPTests.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +98,13 @@
 		8547D715221234A300A87D7A /* PeopleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRepository.swift; sourceTree = "<group>"; };
 		8547D7172213399B00A87D7A /* PinUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinUIButton.swift; sourceTree = "<group>"; };
 		8547D71A2214674100A87D7A /* WebServicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServicesManager.swift; sourceTree = "<group>"; };
+		85C33751221B1F37002E5E7E /* WizardSteps.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WizardSteps.xib; sourceTree = "<group>"; };
+		85C33759221B2065002E5E7E /* WizardStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardStepViewController.swift; sourceTree = "<group>"; };
+		85C3375B221B208D002E5E7E /* WizardSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardSteps.swift; sourceTree = "<group>"; };
+		85C3375E221B20D5002E5E7E /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = IosPocs/Resources/Personalizations/CustomButton.swift; sourceTree = SOURCE_ROOT; };
+		85C3375F221B20D5002E5E7E /* CustomImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomImage.swift; path = IosPocs/Resources/Personalizations/CustomImage.swift; sourceTree = SOURCE_ROOT; };
+		85C33760221B20D5002E5E7E /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomView.swift; path = IosPocs/Resources/Personalizations/CustomView.swift; sourceTree = SOURCE_ROOT; };
+		85C33761221B20D5002E5E7E /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = IosPocs/Resources/Personalizations/CustomTextField.swift; sourceTree = SOURCE_ROOT; };
 		99655A08960D32BEF3865DD1 /* Pods-CajaPiuraMVPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CajaPiuraMVPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CajaPiuraMVPTests/Pods-CajaPiuraMVPTests.release.xcconfig"; sourceTree = "<group>"; };
 		DB230838082BB0863A9317EE /* Pods-CajaPiuraMVPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CajaPiuraMVPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CajaPiuraMVPUITests/Pods-CajaPiuraMVPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,6 +204,7 @@
 		8528BC51220C894900830E7D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				85C33755221B1F8B002E5E7E /* WizardSteps */,
 				8547D6F3220C9D8C00A87D7A /* LoadUsers */,
 				8547D6F2220C9D7000A87D7A /* CustomComponents */,
 			);
@@ -208,6 +223,7 @@
 		8528BC53220C897100830E7D /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				85C3375B221B208D002E5E7E /* WizardSteps.swift */,
 				8528BC24220C884C00830E7D /* ViewController.swift */,
 				8547D705220CCBA300A87D7A /* CustomKeyBoardView.swift */,
 				8547D70F220E221900A87D7A /* CustomTextFieldView.swift */,
@@ -228,6 +244,7 @@
 		8528BC55220C898400830E7D /* view */ = {
 			isa = PBXGroup;
 			children = (
+				85C33751221B1F37002E5E7E /* WizardSteps.xib */,
 				8528BC26220C884C00830E7D /* Main.storyboard */,
 				8547D703220CCB7B00A87D7A /* CustomKeyBoardView.xib */,
 				8547D70D220E1AD300A87D7A /* CustomTextFieldView.xib */,
@@ -239,6 +256,7 @@
 		8547D6EB220C978E00A87D7A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				85C3375D221B20BE002E5E7E /* Personalizations */,
 				8547D6EC220C979F00A87D7A /* Constants.swift */,
 			);
 			path = Resources;
@@ -295,6 +313,35 @@
 				8547D71A2214674100A87D7A /* WebServicesManager.swift */,
 			);
 			path = WebServicesManager;
+			sourceTree = "<group>";
+		};
+		85C33755221B1F8B002E5E7E /* WizardSteps */ = {
+			isa = PBXGroup;
+			children = (
+				85C33756221B1F99002E5E7E /* Controller */,
+			);
+			name = WizardSteps;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		85C33756221B1F99002E5E7E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				85C33759221B2065002E5E7E /* WizardStepViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		85C3375D221B20BE002E5E7E /* Personalizations */ = {
+			isa = PBXGroup;
+			children = (
+				85C3375E221B20D5002E5E7E /* CustomButton.swift */,
+				85C3375F221B20D5002E5E7E /* CustomImage.swift */,
+				85C33761221B20D5002E5E7E /* CustomTextField.swift */,
+				85C33760221B20D5002E5E7E /* CustomView.swift */,
+			);
+			name = Personalizations;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		D710DA592EB090CA27A5DC47 /* Pods */ = {
@@ -428,6 +475,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C33752221B1F37002E5E7E /* WizardSteps.xib in Resources */,
 				8528BC2D220C884E00830E7D /* LaunchScreen.storyboard in Resources */,
 				8547D704220CCB7B00A87D7A /* CustomKeyBoardView.xib in Resources */,
 				8547D6FA220C9E5400A87D7A /* Users.storyboard in Resources */,
@@ -554,19 +602,25 @@
 			files = (
 				8547D710220E221900A87D7A /* CustomTextFieldView.swift in Sources */,
 				8547D6EF220C9A9F00A87D7A /* PeopleModel.swift in Sources */,
+				85C33762221B20D5002E5E7E /* CustomButton.swift in Sources */,
 				8547D6FC220C9EF100A87D7A /* PeopleViewController.swift in Sources */,
 				8528BC25220C884C00830E7D /* ViewController.swift in Sources */,
+				85C33764221B20D5002E5E7E /* CustomView.swift in Sources */,
 				8547D71422121A9E00A87D7A /* MessagesView.swift in Sources */,
+				85C3375A221B2065002E5E7E /* WizardStepViewController.swift in Sources */,
 				8547D706220CCBA300A87D7A /* CustomKeyBoardView.swift in Sources */,
 				8547D716221234A300A87D7A /* PeopleRepository.swift in Sources */,
 				8547D6F1220C9C0A00A87D7A /* PeopleService.swift in Sources */,
 				8528BC23220C884C00830E7D /* AppDelegate.swift in Sources */,
+				85C33763221B20D5002E5E7E /* CustomImage.swift in Sources */,
 				8547D6FE220C9FA200A87D7A /* PeoplePresenter.swift in Sources */,
+				85C33765221B20D5002E5E7E /* CustomTextField.swift in Sources */,
 				8547D6EA220C972800A87D7A /* ApiCallManager.swift in Sources */,
 				8547D7182213399B00A87D7A /* PinUIButton.swift in Sources */,
 				8547D71B2214674100A87D7A /* WebServicesManager.swift in Sources */,
 				8547D6ED220C979F00A87D7A /* Constants.swift in Sources */,
 				8547D70A220CE88C00A87D7A /* CustomKeyBoardPresenter.swift in Sources */,
+				85C3375C221B208D002E5E7E /* WizardSteps.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
