@@ -12,6 +12,8 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+IosPocs.workspace/xcuserdata
+IosPocs.workspace/contents.xcworkspacedata
 
 ## Other
 *.moved-aside
