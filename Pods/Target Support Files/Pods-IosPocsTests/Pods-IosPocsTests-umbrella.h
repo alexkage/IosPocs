@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_CajaPiuraMVPTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_CajaPiuraMVPTestsVersionString[];
+FOUNDATION_EXPORT double Pods_IosPocsTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_IosPocsTestsVersionString[];
 
