@@ -20,7 +20,8 @@ class DynamicKeyboardViewController: UIView {
     @IBOutlet weak var button7: PasswordPinUIButton!
     @IBOutlet weak var button8: PasswordPinUIButton!
     @IBOutlet weak var button9: PasswordPinUIButton!
-    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var buttonNone: PasswordPinUIButton!
+    @IBOutlet weak var deleteButton: PasswordPinUIButton!
     
     var arrayButtons = [PasswordPinUIButton]()
     
@@ -45,6 +46,7 @@ class DynamicKeyboardViewController: UIView {
         view.frame = self.bounds
         view.autoresizingMask = [.flexibleHeight,.flexibleWidth]
         view.clipsToBounds = true
+        view.autoresizesSubviews = true
         self.addSubview(view)
         self.isHidden = true
         setupButtonsList()
@@ -71,10 +73,22 @@ class DynamicKeyboardViewController: UIView {
     // updateButtonsUi will modify the UI of each buttons on the arrayButtons array
     private func updateButtonsUi(){
         
+        self.backgroundColor = UIColor.darkGray
+        
         for i in 0..<arrayButtons.count {
-            arrayButtons[i].titleLabel?.textColor = UIColor.black
-            arrayButtons[i].backgroundColor = .red
+            arrayButtons[i].setTitleColor(UIColor.black, for: .normal)
+            arrayButtons[i].backgroundColor = UIColor.lightGray
+            
         }
+        
+        // ui attrs for none button
+        buttonNone.backgroundColor = UIColor.lightGray
+        buttonNone.isEnabled = false
+        
+        // ui attrs for delete button
+        deleteButton.backgroundColor = UIColor.lightGray
+        deleteButton.setTitleColor(UIColor.black, for: .normal)
+        deleteButton.setTitle("⌫", for: .normal)
         
     }
     

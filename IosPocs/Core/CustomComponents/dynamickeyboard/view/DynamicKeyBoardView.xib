@@ -6,11 +6,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomKeyBoardView" customModule="IosPocs" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DynamicKeyboardViewController" customModule="IosPocs" customModuleProvider="target">
             <connections>
+                <outlet property="ButtonNone" destination="uBk-iU-4cZ" id="P0s-tO-ZVO"/>
                 <outlet property="button0" destination="3rf-59-XjR" id="7Ib-uo-M5A"/>
                 <outlet property="button1" destination="ZYU-bF-EUd" id="OIK-jp-i7y"/>
                 <outlet property="button2" destination="LoV-n1-A33" id="D61-OF-NwY"/>
@@ -21,73 +23,130 @@
                 <outlet property="button7" destination="EZf-fJ-LeB" id="TuV-ZE-DmI"/>
                 <outlet property="button8" destination="90s-GJ-Hiq" id="QEn-1P-D5j"/>
                 <outlet property="button9" destination="CKY-nZ-3UK" id="yW4-6J-CtE"/>
+                <outlet property="deleteButton" destination="2Bg-BS-lqf" id="BWL-pm-PdN"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="323" height="189"/>
+            <rect key="frame" x="0.0" y="0.0" width="419" height="210"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rf-59-XjR" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
-                    <rect key="frame" x="20" y="14" width="82" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYU-bF-EUd" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
-                    <rect key="frame" x="120" y="13" width="82" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoV-n1-A33" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
-                    <rect key="frame" x="221" y="13" width="82" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS8-jq-z7T" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
-                    <rect key="frame" x="20" y="57" width="82" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ci-ev-3o4" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
-                    <rect key="frame" x="221" y="57" width="82" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFv-wk-9us" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
-                    <rect key="frame" x="20" y="102" width="82" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZf-fJ-LeB" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
-                    <rect key="frame" x="120" y="102" width="82" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90s-GJ-Hiq" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
-                    <rect key="frame" x="221" y="102" width="82" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKY-nZ-3UK" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
-                    <rect key="frame" x="120" y="145" width="82" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Bg-BS-lqf">
-                    <rect key="frame" x="221" y="145" width="82" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" title="X"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAZ-uw-Tqy" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
-                    <rect key="frame" x="120" y="57" width="82" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8xi-sD-4nC" userLabel="rowsContainer">
+                    <rect key="frame" x="21" y="5.5" width="377" height="199.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OGi-XF-6Xw" userLabel="firstRow">
+                            <rect key="frame" x="0.0" y="0.0" width="377" height="43.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rf-59-XjR" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="113" height="43.5"/>
+                                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYU-bF-EUd" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
+                                    <rect key="frame" x="132" y="0.0" width="113" height="43.5"/>
+                                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoV-n1-A33" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
+                                    <rect key="frame" x="264" y="0.0" width="113" height="43.5"/>
+                                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="LoV-n1-A33" firstAttribute="width" secondItem="OGi-XF-6Xw" secondAttribute="width" multiplier="0.3" id="GMv-fe-vQI"/>
+                                <constraint firstItem="3rf-59-XjR" firstAttribute="width" secondItem="OGi-XF-6Xw" secondAttribute="width" multiplier="0.3" id="ddV-Iq-Pwe"/>
+                                <constraint firstItem="ZYU-bF-EUd" firstAttribute="width" secondItem="OGi-XF-6Xw" secondAttribute="width" multiplier="0.3" id="uDr-6a-erL"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9es-1i-1Pq" userLabel="secondRow">
+                            <rect key="frame" x="0.0" y="51.5" width="377" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS8-jq-z7T" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="113" height="44"/>
+                                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAZ-uw-Tqy" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
+                                    <rect key="frame" x="132" y="0.0" width="113" height="44"/>
+                                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ci-ev-3o4" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
+                                    <rect key="frame" x="264" y="0.0" width="113" height="44"/>
+                                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="SAZ-uw-Tqy" firstAttribute="width" secondItem="9es-1i-1Pq" secondAttribute="width" multiplier="0.3" id="HbF-ah-jaD"/>
+                                <constraint firstItem="IS8-jq-z7T" firstAttribute="width" secondItem="9es-1i-1Pq" secondAttribute="width" multiplier="0.3" id="fYc-r2-pdu"/>
+                                <constraint firstItem="6Ci-ev-3o4" firstAttribute="width" secondItem="9es-1i-1Pq" secondAttribute="width" multiplier="0.3" id="iIQ-BM-180"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hgn-LN-z2D" userLabel="thirdRow">
+                            <rect key="frame" x="0.0" y="103.5" width="377" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFv-wk-9us" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="113" height="44"/>
+                                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZf-fJ-LeB" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
+                                    <rect key="frame" x="132" y="0.0" width="113" height="44"/>
+                                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90s-GJ-Hiq" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
+                                    <rect key="frame" x="264" y="0.0" width="113" height="44"/>
+                                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="VFv-wk-9us" firstAttribute="width" secondItem="hgn-LN-z2D" secondAttribute="width" multiplier="0.3" id="gyy-VJ-Drc"/>
+                                <constraint firstItem="90s-GJ-Hiq" firstAttribute="width" secondItem="hgn-LN-z2D" secondAttribute="width" multiplier="0.3" id="i4N-JO-g8O"/>
+                                <constraint firstItem="EZf-fJ-LeB" firstAttribute="width" secondItem="hgn-LN-z2D" secondAttribute="width" multiplier="0.3" id="ohj-rS-vvV"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="B0o-p3-PWD" userLabel="fourthRow">
+                            <rect key="frame" x="0.0" y="155.5" width="377" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBk-iU-4cZ" userLabel="ButtonNone" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="113" height="44"/>
+                                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
+                                    </accessibility>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKY-nZ-3UK" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
+                                    <rect key="frame" x="132" y="0.0" width="113" height="44"/>
+                                    <color key="backgroundColor" red="0.73785411970000003" green="0.92158491840000001" blue="0.80952112030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Bg-BS-lqf" userLabel="ButtonDelete" customClass="PasswordPinUIButton" customModule="IosPocs" customModuleProvider="target">
+                                    <rect key="frame" x="264" y="0.0" width="113" height="44"/>
+                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="X"/>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="uBk-iU-4cZ" firstAttribute="width" secondItem="B0o-p3-PWD" secondAttribute="width" multiplier="0.3" id="C9m-IV-ZLE"/>
+                                <constraint firstItem="2Bg-BS-lqf" firstAttribute="width" secondItem="B0o-p3-PWD" secondAttribute="width" multiplier="0.3" id="CnQ-RE-cjd"/>
+                                <constraint firstItem="CKY-nZ-3UK" firstAttribute="width" secondItem="B0o-p3-PWD" secondAttribute="width" multiplier="0.3" id="Rie-P5-jQn"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="hgn-LN-z2D" firstAttribute="width" secondItem="8xi-sD-4nC" secondAttribute="width" id="49D-ga-HHb"/>
+                        <constraint firstItem="hgn-LN-z2D" firstAttribute="height" secondItem="OGi-XF-6Xw" secondAttribute="height" id="Afv-mB-fwn"/>
+                        <constraint firstItem="B0o-p3-PWD" firstAttribute="height" secondItem="OGi-XF-6Xw" secondAttribute="height" id="Jzc-Mp-wPh"/>
+                        <constraint firstItem="9es-1i-1Pq" firstAttribute="width" secondItem="8xi-sD-4nC" secondAttribute="width" id="LSw-Xt-d9E"/>
+                        <constraint firstItem="9es-1i-1Pq" firstAttribute="height" secondItem="OGi-XF-6Xw" secondAttribute="height" id="hHz-5P-FKp"/>
+                        <constraint firstItem="B0o-p3-PWD" firstAttribute="width" secondItem="8xi-sD-4nC" secondAttribute="width" id="i62-Ri-zqo"/>
+                        <constraint firstItem="OGi-XF-6Xw" firstAttribute="width" secondItem="8xi-sD-4nC" secondAttribute="width" id="tXv-xF-xcG"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8xi-sD-4nC" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.95" id="7da-5w-aE2"/>
+                <constraint firstItem="8xi-sD-4nC" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="Siy-Fz-PsU"/>
+                <constraint firstItem="8xi-sD-4nC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WKW-oO-8Ca"/>
+                <constraint firstItem="8xi-sD-4nC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ipC-Dw-HoU"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="92" y="369.26536731634184"/>
+            <point key="canvasLocation" x="221.59999999999999" y="290.55472263868069"/>
         </view>
     </objects>
 </document>
