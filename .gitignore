@@ -15,6 +15,9 @@ xcuserdata/
 IosPocs.workspace/xcuserdata
 IosPocs.workspace/contents.xcworkspacedata
 
+## when working with AppCode
+.idea
+
 ## Other
 *.moved-aside
 *.xccheckout

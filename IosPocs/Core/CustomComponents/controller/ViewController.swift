@@ -13,7 +13,7 @@ class ViewController: UIViewController,TextFieldDelegate {
     
 
     @IBOutlet weak var textFieldView: CustomTextFieldView!
-    @IBOutlet weak var keyBoardView: CustomKeyBoardView!
+    @IBOutlet weak var keyBoardView: DynamicKeyboardViewController!
     var msgView:MessagesView = MessagesView()
     
     var buttonsPositions = [String]()
@@ -41,7 +41,7 @@ class ViewController: UIViewController,TextFieldDelegate {
         
         keyBoardView.alpha = 0.0
         
-        self.keyBoardView.setkeyboardDelegate(delegate: self.textFieldView)
+        self.keyBoardView.setKeyboardDelegate(delegate: self.textFieldView)
         self.textFieldView.delegate = self
         
       

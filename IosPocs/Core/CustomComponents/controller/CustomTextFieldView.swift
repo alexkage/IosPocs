@@ -13,7 +13,7 @@ protocol TextFieldDelegate {
     func closeKeyboard()
 }
 
-class CustomTextFieldView: UIView, UITextFieldDelegate, KeyBoardDelegate {
+class CustomTextFieldView: UIView, UITextFieldDelegate, KeyBoardDelegate, DynamicKeyboardDelegate {
     
     @IBOutlet weak var textfield0: UITextField!
     @IBOutlet weak var textfield1: UITextField!
@@ -152,5 +152,52 @@ class CustomTextFieldView: UIView, UITextFieldDelegate, KeyBoardDelegate {
         }
         cont += 1
     }
+    
+    func onKeyPressed(sender: PasswordPinUIButton) {
+        let number = sender.titleLabel!.text!
+        
+        self.textfield0.text = number
+        
+        //        for i in 0..<arrayTextFields.count{
+        //            arrayTextFields[i].text = number
+        //        }
+        
+        // This must be changed
+        switch cont {
+        case 0:
+            self.textfield0.text = number
+        //            textfield2.becomeFirstResponder()
+        case 1:
+            self.textfield1.text = number
+        //            textfield3.becomeFirstResponder()
+        case 2:
+            self.textfield2.text = number
+        //            textfield4.becomeFirstResponder()
+        case 3:
+            self.textfield3.text = number
+        //            textfield5.becomeFirstResponder()
+        case 4:
+            self.textfield4.text = number
+        //            textfield6.becomeFirstResponder()
+        case 5:
+            self.textfield5.text = number
+            self.delegate?.closeKeyboard()
+        default:
+            break
+        }
+        cont += 1
+    }
+    
+    func onDeleteKeyPressed() {
+        cont = 0
+        //        textfield1.becomeFirstResponder()
+        textfield0.text = ""
+        textfield1.text = ""
+        textfield2.text = ""
+        textfield3.text = ""
+        textfield4.text = ""
+        textfield5.text = ""
+    }
+    
    
 }
