@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CajaPiuraMVP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IosPocs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,7 +34,7 @@
                                     <action selector="showMsg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QHH-4t-l7w"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e2D-e4-7j0" customClass="CustomKeyBoardView" customModule="CajaPiuraMVP" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e2D-e4-7j0" customClass="CustomKeyBoardView" customModule="IosPocs" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="478" width="375" height="189"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -43,7 +43,7 @@
                                 <rect key="frame" x="163" y="301" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RSo-nD-hBl" customClass="CustomTextFieldView" customModule="CajaPiuraMVP" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RSo-nD-hBl" customClass="CustomTextFieldView" customModule="IosPocs" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="183" width="375" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -88,12 +88,12 @@
         <!--Wizard Step View Controller-->
         <scene sceneID="Ud0-td-EWx">
             <objects>
-                <viewController id="gG7-Ew-Byz" customClass="WizardStepViewController" customModule="CajaPiuraMVP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gG7-Ew-Byz" customClass="WizardStepViewController" customModule="IosPocs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gpe-KK-CC6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BB-0D-tLi" customClass="WizardSteps" customModule="CajaPiuraMVP" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BB-0D-tLi" customClass="WizardSteps" customModule="IosPocs" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55" width="375" height="81"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
