@@ -10,19 +10,6 @@ import UIKit
 // DynamicKeyboardViewController will take control over the .xib UI element: DynamicKeyboardView.xib
 class DynamicKeyboardViewController: UIView {
     
-    @IBOutlet weak var button0: PasswordPinUIButton!
-    @IBOutlet weak var button1: PasswordPinUIButton!
-    @IBOutlet weak var button2: PasswordPinUIButton!
-    @IBOutlet weak var button3: PasswordPinUIButton!
-    @IBOutlet weak var button4: PasswordPinUIButton!
-    @IBOutlet weak var button5: PasswordPinUIButton!
-    @IBOutlet weak var button6: PasswordPinUIButton!
-    @IBOutlet weak var button7: PasswordPinUIButton!
-    @IBOutlet weak var button8: PasswordPinUIButton!
-    @IBOutlet weak var button9: PasswordPinUIButton!
-    @IBOutlet weak var buttonNone: PasswordPinUIButton!
-    @IBOutlet weak var deleteButton: PasswordPinUIButton!
-    
     var arrayButtons = [PasswordPinUIButton]()
     
     // main keyboard view
@@ -55,44 +42,75 @@ class DynamicKeyboardViewController: UIView {
     }
     
     private func setupButtonsList(){
-        self.arrayButtons.append(button0)
-        self.arrayButtons.append(button1)
-        self.arrayButtons.append(button2)
-        self.arrayButtons.append(button3)
-        self.arrayButtons.append(button4)
-        self.arrayButtons.append(button5)
-        self.arrayButtons.append(button6)
-        self.arrayButtons.append(button7)
-        self.arrayButtons.append(button8)
-        self.arrayButtons.append(button9)
-        
-        let clickListener = UITapGestureRecognizer(target: self, action: #selector(self.onDeleteKeyPressed(sender:)))
-        deleteButton?.addGestureRecognizer(clickListener)
-        
-        updateButtonsUi()
-    }
-    
-    // updateButtonsUi will modify the UI of each buttons on the arrayButtons array
-    private func updateButtonsUi(){
         
         self.view.backgroundColor = UIColor.darkGray
-        
-        // ui attrs for all numeric buttons
-        for i in 0..<arrayButtons.count {
-            arrayButtons[i].setTitleColor(UIColor.black, for: .normal)
-            arrayButtons[i].backgroundColor = UIColor.lightGray
-            arrayButtons[i].titleLabel?.font = .systemFont(ofSize: 22)
+    
+        for i in 0..<12{
+            let btn = createButton(buttonPosition: i)
+            
+            if i == 9 {
+                // ui attrs for none button
+                btn.isEnabled = false
+            } else if i == 11 {
+                // ui attrs for delete button
+                let clickListener = UITapGestureRecognizer(target: self, action: #selector(self.onDeleteKeyPressed(sender:)))
+                btn.setTitle("⌫", for: .normal)
+                btn.addGestureRecognizer(clickListener)
+            } else {
+                arrayButtons.append(btn)
+            }
+            
+            self.addSubview(btn)
         }
         
-        // ui attrs for none button
-        buttonNone.backgroundColor = UIColor.lightGray
-        buttonNone.isEnabled = false
+    }
+    
+    private func createButton(buttonPosition: Int) -> PasswordPinUIButton {
         
-        // ui attrs for delete button
-        deleteButton.backgroundColor = UIColor.lightGray
-        deleteButton.setTitleColor(UIColor.black, for: .normal)
-        deleteButton.setTitle("⌫", for: .normal)
-        deleteButton.titleLabel?.font = .systemFont(ofSize: 22)
+        let buttonDefWidth = UIScreen.main.bounds.width * 0.3
+        let buttonDefHeight = CGFloat(40)
+        
+        var xPos = CGFloat(0)
+        var yPos = CGFloat(0)
+        
+        if [0, 3, 6, 9].contains(buttonPosition) {
+            xPos = 10
+        }
+        
+        if [1, 4 ,7 , 10].contains(buttonPosition) {
+            xPos = buttonDefWidth + 20
+        }
+        
+        if [2, 5 ,8 ,11].contains(buttonPosition) {
+            xPos = (buttonDefWidth * 2) + 30
+        }
+        
+        if buttonPosition < 3 {
+            yPos = 10
+        }
+        
+        if buttonPosition >= 3 && buttonPosition < 6 {
+            yPos = buttonDefHeight + 20
+        }
+        
+        if buttonPosition >= 6 && buttonPosition < 9 {
+            yPos = (buttonDefHeight * 2) + 30
+        }
+        
+        if buttonPosition >= 9 && buttonPosition < 12 {
+            yPos = (buttonDefHeight * 3) + 40
+        }
+        
+        let button = PasswordPinUIButton(frame: CGRect(x: xPos, y: yPos, width: buttonDefWidth, height: buttonDefHeight))
+        button.layoutMargins.top = 10
+        button.layoutMargins.right = 10
+        button.layoutMargins.left = 10
+        button.layoutMargins.bottom = 10
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.backgroundColor = UIColor.lightGray
+        button.titleLabel?.font = .systemFont(ofSize: 22)
+        
+        return button
         
     }
     
@@ -101,13 +119,17 @@ class DynamicKeyboardViewController: UIView {
         for i in 0..<arrayButtons.count {
             arrayButtons[i].setTitle(arrayPositions[i], for: .normal)
             arrayButtons[i].position = i
-            let clickListener = UITapGestureRecognizer(target: self, action: #selector(self.onDeleteKeyPressed(sender:)))
-            arrayButtons[i].addGestureRecognizer(clickListener)
+            let clickListener = UITapGestureRecognizer(target: self, action: #selector(self.onKeyPressed(sender:)))
+            
+            // TODO when clicked, error stops the app
+            // [UITapGestureRecognizer titleLabel]: unrecognized selector sent to instance
+            //arrayButtons[i].addGestureRecognizer(clickListener)
         }
     }
     
     @objc private func onKeyPressed(sender: PasswordPinUIButton){
         self.delegate?.onKeyPressed(sender: sender)
+        print("tecla toco \(sender.position)")
     }
     
     @objc private func onDeleteKeyPressed(sender: UIButton){
