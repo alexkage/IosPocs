@@ -46,17 +46,27 @@ class WizardSteps: UIView, ButtonNextStep {
         self.addSubview(view)
         stepView0.backgroundColor = UIColor.orange
         addViewsToArray()
+        createStepViews(amount: 1)
  
     }
     func addViewsToArray() {
         arrayViews.append(stepView0)
         arrayViews.append(stepView1)
-        arrayViews.append(stepView1)
+        arrayViews.append(stepView2)
         arrayViews.append(stepView3)
     }
     
+    func createStepViews(amount: Int){
+       
+        for _ in 0...amount{
+            let customView = UIView(frame: CGRect(x: 16, y: 20, width: 48, height: 48))
+            customView.layer.cornerRadius = 25
+            customView.backgroundColor = UIColor.black
+            self.addSubview(customView)
+        }
+    }
     
-    func updateSteps() {
+    func updateSteps(){
  
         switch cont {
         case 1:
@@ -68,6 +78,7 @@ class WizardSteps: UIView, ButtonNextStep {
         case 3:
             stepView3.backgroundColor = UIColor.orange
             line2.backgroundColor = UIColor.orange
+            
         default:
             break
         }

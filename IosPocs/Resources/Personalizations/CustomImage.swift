@@ -1,10 +1,4 @@
-//
-//  CustomImage.swift
-//  Pandero
-//
-//  Created by Omar Huanay on 7/25/17.
-//  Copyright © 2017 Omar Huanay. All rights reserved.
-//
+
 
 import UIKit
 
