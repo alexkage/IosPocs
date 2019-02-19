@@ -25,6 +25,9 @@ class DynamicKeyboardViewController: UIView {
     
     var arrayButtons = [PasswordPinUIButton]()
     
+    // main keyboard view
+    var view: UIView!
+    
     private var delegate:DynamicKeyboardDelegate?
     
     override init(frame: CGRect) {
@@ -42,13 +45,12 @@ class DynamicKeyboardViewController: UIView {
     }
     
     private func setup(){
-        let view = Bundle.main.loadNibNamed("DynamicKeyBoardView", owner: self, options: nil)?[0] as! UIView
+        view = Bundle.main.loadNibNamed("DynamicKeyBoardView", owner: self, options: nil)?[0] as? UIView
         view.frame = self.bounds
         view.autoresizingMask = [.flexibleHeight,.flexibleWidth]
         view.clipsToBounds = true
         view.autoresizesSubviews = true
         self.addSubview(view)
-        self.isHidden = true
         setupButtonsList()
     }
     
@@ -73,12 +75,13 @@ class DynamicKeyboardViewController: UIView {
     // updateButtonsUi will modify the UI of each buttons on the arrayButtons array
     private func updateButtonsUi(){
         
-        self.backgroundColor = UIColor.darkGray
+        self.view.backgroundColor = UIColor.darkGray
         
+        // ui attrs for all numeric buttons
         for i in 0..<arrayButtons.count {
             arrayButtons[i].setTitleColor(UIColor.black, for: .normal)
             arrayButtons[i].backgroundColor = UIColor.lightGray
-            
+            arrayButtons[i].titleLabel?.font = .systemFont(ofSize: 22)
         }
         
         // ui attrs for none button
@@ -89,6 +92,7 @@ class DynamicKeyboardViewController: UIView {
         deleteButton.backgroundColor = UIColor.lightGray
         deleteButton.setTitleColor(UIColor.black, for: .normal)
         deleteButton.setTitle("⌫", for: .normal)
+        deleteButton.titleLabel?.font = .systemFont(ofSize: 22)
         
     }
     
@@ -112,25 +116,26 @@ class DynamicKeyboardViewController: UIView {
     
     // shows the dynamic keyboard if it is hidden
     func show(){
-        if(self.isHidden){
-            UIView.animate(withDuration: 0.3, delay: 0,
-                           options: UIView.AnimationOptions.curveEaseInOut,
-                           animations: {
-                            self.alpha = 1
-            }, completion:{
-                _ in
-                self.isHidden = false
-            })
-        }
+        self.isHidden = false
+        UIView.animate(withDuration: 1.0, delay: 0,
+                       options: UIView.AnimationOptions.curveEaseIn,
+                       animations: {
+                        //self.alpha = 1
+                        self.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - 220,
+                                            width: UIScreen.main.bounds.size.width, height: CGFloat(220))
+        }, completion:{
+            _ in
+        })
     }
     
     // closes the dynamic keyboard if it is shown
     func close(){
         if(!self.isHidden){
-            UIView.animate(withDuration: 0.3, delay: 0,
-                           options: UIView.AnimationOptions.curveEaseInOut,
+            UIView.animate(withDuration: 1.0, delay: 0,
+                           options: UIView.AnimationOptions.curveLinear,
                            animations: {
                             self.alpha = 0
+                            self.frame = self.bounds
             },
                            completion: {
                             _ in
