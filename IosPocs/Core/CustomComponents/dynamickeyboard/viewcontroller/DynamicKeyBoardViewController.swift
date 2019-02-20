@@ -119,17 +119,13 @@ class DynamicKeyboardViewController: UIView {
         for i in 0..<arrayButtons.count {
             arrayButtons[i].setTitle(arrayPositions[i], for: .normal)
             arrayButtons[i].position = i
-            let clickListener = UITapGestureRecognizer(target: self, action: #selector(self.onKeyPressed(sender:)))
-            
-            // TODO when clicked, error stops the app
-            // [UITapGestureRecognizer titleLabel]: unrecognized selector sent to instance
-            //arrayButtons[i].addGestureRecognizer(clickListener)
+            arrayButtons[i].addTarget(self, action: #selector(onKeyPressed(sender:)), for: .touchUpInside)
         }
     }
     
     @objc private func onKeyPressed(sender: PasswordPinUIButton){
         self.delegate?.onKeyPressed(sender: sender)
-        print("tecla toco \(sender.position)")
+        print("Touched key on position\(sender.position!)")
     }
     
     @objc private func onDeleteKeyPressed(sender: UIButton){
