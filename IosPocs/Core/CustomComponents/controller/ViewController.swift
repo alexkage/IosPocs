@@ -13,7 +13,7 @@ class ViewController: UIViewController,TextFieldDelegate {
     
 
     @IBOutlet weak var textFieldView: CustomTextFieldView!
-    @IBOutlet weak var keyBoardView: CustomKeyBoardView!
+    @IBOutlet weak var keyBoardView: DynamicKeyboardViewController!
     var msgView:MessagesView = MessagesView()
     
     var buttonsPositions = [String]()
@@ -34,14 +34,15 @@ class ViewController: UIViewController,TextFieldDelegate {
         self.msgView.center = CGPoint(x: width/2, y: height/2)
 
         activityIndicator.hidesWhenStopped = true
+        keyBoardView.frame = CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: CGFloat(220))
         keyBoardView.setKeyPosition(arrayPositions: arraykeyPos)
         
         
 //                NotificationCenter.default.addObserver(self, selector: #selector(self.changeText(notification:)), name: NSNotification.Name("ButtonPressed"), object: nil)
         
-        keyBoardView.alpha = 0.0
+
         
-        self.keyBoardView.setkeyboardDelegate(delegate: self.textFieldView)
+        self.keyBoardView.setKeyboardDelegate(delegate: self.textFieldView)
         self.textFieldView.delegate = self
         
       

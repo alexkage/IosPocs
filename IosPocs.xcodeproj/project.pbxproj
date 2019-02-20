@@ -40,8 +40,11 @@
 		85C33764221B20D5002E5E7E /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C33760221B20D5002E5E7E /* CustomView.swift */; };
 		85C33765221B20D5002E5E7E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C33761221B20D5002E5E7E /* CustomTextField.swift */; };
 		97E1CB9497A8CB6DF46B54CA /* Pods_IosPocs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E73BCEBC31D7C6D11DDF1F2 /* Pods_IosPocs.framework */; };
+		A5572FA6221B51EE001D2704 /* DynamicKeyBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5572FA5221B51EE001D2704 /* DynamicKeyBoardViewController.swift */; };
+		A5572FA8221B51F3001D2704 /* DynamicKeyBoardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5572FA7221B51F3001D2704 /* DynamicKeyBoardView.xib */; };
+		A5572FAB221B5290001D2704 /* DynamicKeyboardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5572FAA221B5290001D2704 /* DynamicKeyboardDelegate.swift */; };
+		A5572FAE221B52F2001D2704 /* PasswordPinUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5572FAD221B52F2001D2704 /* PasswordPinUIButton.swift */; };
 		AAE7150D26B8D50B3434CC20 /* Pods_IosPocsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6582D243302DCC276641628F /* Pods_IosPocsTests.framework */; };
-		AC547BF9BD6DB305E3D72CB8 /* Pods_CajaPiuraMVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A822E1D69B4D5373AAF0473 /* Pods_CajaPiuraMVP.framework */; };
 		CCF0A9713A3827A8C12C439F /* Pods_IosPocsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927BEF7704229305BC2519E7 /* Pods_IosPocsUITests.framework */; };
 		FAFFCD071D9ECCADE264C621 /* Pods_CajaPiuraMVPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08848B2E49742BB3BAB0B05B /* Pods_CajaPiuraMVPTests.framework */; };
 /* End PBXBuildFile section */
@@ -117,6 +120,10 @@
 		8CFE730A5FC22DFA488C396C /* Pods-IosPocs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosPocs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IosPocs/Pods-IosPocs.debug.xcconfig"; sourceTree = "<group>"; };
 		927BEF7704229305BC2519E7 /* Pods_IosPocsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosPocsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99655A08960D32BEF3865DD1 /* Pods-CajaPiuraMVPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CajaPiuraMVPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CajaPiuraMVPTests/Pods-CajaPiuraMVPTests.release.xcconfig"; sourceTree = "<group>"; };
+		A5572FA5221B51EE001D2704 /* DynamicKeyBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicKeyBoardViewController.swift; sourceTree = "<group>"; };
+		A5572FA7221B51F3001D2704 /* DynamicKeyBoardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DynamicKeyBoardView.xib; sourceTree = "<group>"; };
+		A5572FAA221B5290001D2704 /* DynamicKeyboardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicKeyboardDelegate.swift; sourceTree = "<group>"; };
+		A5572FAD221B52F2001D2704 /* PasswordPinUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordPinUIButton.swift; sourceTree = "<group>"; };
 		CC1BBF59AA0B781F83A5D030 /* Pods-IosPocsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosPocsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IosPocsUITests/Pods-IosPocsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB230838082BB0863A9317EE /* Pods-CajaPiuraMVPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CajaPiuraMVPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CajaPiuraMVPUITests/Pods-CajaPiuraMVPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,7 +133,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC547BF9BD6DB305E3D72CB8 /* Pods_CajaPiuraMVP.framework in Frameworks */,
 				97E1CB9497A8CB6DF46B54CA /* Pods_IosPocs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,9 +244,9 @@
 		8528BC53220C897100830E7D /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				8547D705220CCBA300A87D7A /* CustomKeyBoardView.swift */,
 				85C3375B221B208D002E5E7E /* WizardSteps.swift */,
 				8528BC24220C884C00830E7D /* ViewController.swift */,
-				8547D705220CCBA300A87D7A /* CustomKeyBoardView.swift */,
 				8547D70F220E221900A87D7A /* CustomTextFieldView.swift */,
 				8547D71322121A9E00A87D7A /* MessagesView.swift */,
 				8547D7172213399B00A87D7A /* PinUIButton.swift */,
@@ -280,6 +286,7 @@
 		8547D6F2220C9D7000A87D7A /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
+				A5572FA2221B512A001D2704 /* dynamickeyboard */,
 				8528BC55220C898400830E7D /* view */,
 				8528BC54220C897B00830E7D /* presenter */,
 				8528BC53220C897100830E7D /* controller */,
@@ -357,6 +364,49 @@
 			);
 			name = Personalizations;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A5572FA2221B512A001D2704 /* dynamickeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A5572FAC221B52C1001D2704 /* customUi */,
+				A5572FA9221B5278001D2704 /* protocol */,
+				A5572FA4221B5149001D2704 /* viewcontroller */,
+				A5572FA3221B513D001D2704 /* view */,
+			);
+			path = dynamickeyboard;
+			sourceTree = "<group>";
+		};
+		A5572FA3221B513D001D2704 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A5572FA7221B51F3001D2704 /* DynamicKeyBoardView.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A5572FA4221B5149001D2704 /* viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				A5572FA5221B51EE001D2704 /* DynamicKeyBoardViewController.swift */,
+			);
+			path = viewcontroller;
+			sourceTree = "<group>";
+		};
+		A5572FA9221B5278001D2704 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A5572FAA221B5290001D2704 /* DynamicKeyboardDelegate.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		A5572FAC221B52C1001D2704 /* customUi */ = {
+			isa = PBXGroup;
+			children = (
+				A5572FAD221B52F2001D2704 /* PasswordPinUIButton.swift */,
+			);
+			path = customUi;
 			sourceTree = "<group>";
 		};
 		D710DA592EB090CA27A5DC47 /* Pods */ = {
@@ -504,6 +554,7 @@
 				8547D704220CCB7B00A87D7A /* CustomKeyBoardView.xib in Resources */,
 				8547D6FA220C9E5400A87D7A /* Users.storyboard in Resources */,
 				8528BC2A220C884E00830E7D /* Assets.xcassets in Resources */,
+				A5572FA8221B51F3001D2704 /* DynamicKeyBoardView.xib in Resources */,
 				8528BC28220C884C00830E7D /* Main.storyboard in Resources */,
 				8547D70E220E1AD300A87D7A /* CustomTextFieldView.xib in Resources */,
 				8547D71222120F6000A87D7A /* MessagesView.xib in Resources */,
@@ -632,15 +683,18 @@
 				85C33764221B20D5002E5E7E /* CustomView.swift in Sources */,
 				8547D71422121A9E00A87D7A /* MessagesView.swift in Sources */,
 				85C3375A221B2065002E5E7E /* WizardStepViewController.swift in Sources */,
+				A5572FAE221B52F2001D2704 /* PasswordPinUIButton.swift in Sources */,
 				8547D706220CCBA300A87D7A /* CustomKeyBoardView.swift in Sources */,
 				8547D716221234A300A87D7A /* PeopleRepository.swift in Sources */,
 				8547D6F1220C9C0A00A87D7A /* PeopleService.swift in Sources */,
 				8528BC23220C884C00830E7D /* AppDelegate.swift in Sources */,
 				85C33763221B20D5002E5E7E /* CustomImage.swift in Sources */,
 				8547D6FE220C9FA200A87D7A /* PeoplePresenter.swift in Sources */,
+				A5572FAB221B5290001D2704 /* DynamicKeyboardDelegate.swift in Sources */,
 				85C33765221B20D5002E5E7E /* CustomTextField.swift in Sources */,
 				8547D6EA220C972800A87D7A /* ApiCallManager.swift in Sources */,
 				8547D7182213399B00A87D7A /* PinUIButton.swift in Sources */,
+				A5572FA6221B51EE001D2704 /* DynamicKeyBoardViewController.swift in Sources */,
 				8547D71B2214674100A87D7A /* WebServicesManager.swift in Sources */,
 				8547D6ED220C979F00A87D7A /* Constants.swift in Sources */,
 				8547D70A220CE88C00A87D7A /* CustomKeyBoardPresenter.swift in Sources */,
@@ -761,8 +815,9 @@
 			baseConfigurationReference = 249428E5658255F1C1B86EEF /* Pods-IosPocs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6NW4885JAS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IosPocs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -771,6 +826,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexkage.IosPocs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -782,8 +838,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6NW4885JAS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IosPocsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -792,6 +849,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexkage.IosPocsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IosPocs.app/IosPocs";
@@ -803,8 +861,9 @@
 			baseConfigurationReference = 71B8638C3E57BB1F0A0E862E /* Pods-IosPocsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6NW4885JAS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IosPocsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -813,6 +872,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexkage.IosPocsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CajaPiuraMVP;
@@ -887,8 +947,9 @@
 			baseConfigurationReference = 8CFE730A5FC22DFA488C396C /* Pods-IosPocs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6NW4885JAS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IosPocs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -897,6 +958,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexkage.IosPocs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -908,8 +970,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6NW4885JAS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IosPocsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -918,6 +981,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexkage.IosPocsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IosPocs.app/IosPocs";
@@ -929,8 +993,9 @@
 			baseConfigurationReference = CC1BBF59AA0B781F83A5D030 /* Pods-IosPocsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6NW4885JAS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IosPocsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -939,6 +1004,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexkage.IosPocsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CajaPiuraMVP;

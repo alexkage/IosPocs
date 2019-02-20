@@ -5,7 +5,7 @@ target 'IosPocs' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for CajaPiuraMVP
+  # Pods for IosPocs
 
     pod 'SwiftyJSON'
     pod 'Alamofire'

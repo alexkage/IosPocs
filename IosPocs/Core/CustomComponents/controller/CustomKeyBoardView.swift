@@ -30,7 +30,6 @@ class CustomKeyBoardView: UIView {
     var arrayButtons = [PinUIButton]()
     private var delegate:KeyBoardDelegate?
     
-   
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setup()
