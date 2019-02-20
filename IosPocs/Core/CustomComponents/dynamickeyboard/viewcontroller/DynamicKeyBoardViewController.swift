@@ -150,15 +150,16 @@ class DynamicKeyboardViewController: UIView {
     
     // closes the dynamic keyboard if it is shown
     func close(){
-        self.isHidden = true
+        
         UIView.animate(withDuration: 0.5, delay: 0,
-                       options: UIView.AnimationOptions.curveEaseIn,
+                       options: UIView.AnimationOptions.curveEaseOut,
                        animations: {
-                        //self.alpha = 1
+//                        self.alpha = 0
                         self.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height,
                                             width: UIScreen.main.bounds.size.width, height: CGFloat(220))
         }, completion:{
             _ in
+            self.isHidden = true
         })
     }
     
