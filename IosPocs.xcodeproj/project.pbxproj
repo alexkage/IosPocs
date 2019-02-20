@@ -40,7 +40,8 @@
 		85C33764221B20D5002E5E7E /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C33760221B20D5002E5E7E /* CustomView.swift */; };
 		85C33765221B20D5002E5E7E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C33761221B20D5002E5E7E /* CustomTextField.swift */; };
 		97E1CB9497A8CB6DF46B54CA /* Pods_IosPocs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E73BCEBC31D7C6D11DDF1F2 /* Pods_IosPocs.framework */; };
-		A542FE64221DB87300E3C2AB /* otpToken in Resources */ = {isa = PBXBuildFile; fileRef = A542FE63221DB87200E3C2AB /* otpToken */; };
+		A530CEB7221DBB83004F039F /* OTPTokenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530CEB6221DBB83004F039F /* OTPTokenTest.swift */; };
+		A542FE64221DB87300E3C2AB /* OtpToken in Resources */ = {isa = PBXBuildFile; fileRef = A542FE63221DB87200E3C2AB /* OtpToken */; };
 		A5572FA6221B51EE001D2704 /* DynamicKeyBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5572FA5221B51EE001D2704 /* DynamicKeyBoardViewController.swift */; };
 		A5572FA8221B51F3001D2704 /* DynamicKeyBoardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5572FA7221B51F3001D2704 /* DynamicKeyBoardView.xib */; };
 		A5572FAB221B5290001D2704 /* DynamicKeyboardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5572FAA221B5290001D2704 /* DynamicKeyboardDelegate.swift */; };
@@ -121,7 +122,8 @@
 		8CFE730A5FC22DFA488C396C /* Pods-IosPocs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosPocs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IosPocs/Pods-IosPocs.debug.xcconfig"; sourceTree = "<group>"; };
 		927BEF7704229305BC2519E7 /* Pods_IosPocsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosPocsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99655A08960D32BEF3865DD1 /* Pods-CajaPiuraMVPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CajaPiuraMVPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CajaPiuraMVPTests/Pods-CajaPiuraMVPTests.release.xcconfig"; sourceTree = "<group>"; };
-		A542FE63221DB87200E3C2AB /* otpToken */ = {isa = PBXFileReference; lastKnownFileType = folder; path = otpToken; sourceTree = "<group>"; };
+		A530CEB6221DBB83004F039F /* OTPTokenTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTokenTest.swift; sourceTree = "<group>"; };
+		A542FE63221DB87200E3C2AB /* OtpToken */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OtpToken; sourceTree = "<group>"; };
 		A5572FA5221B51EE001D2704 /* DynamicKeyBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicKeyBoardViewController.swift; sourceTree = "<group>"; };
 		A5572FA7221B51F3001D2704 /* DynamicKeyBoardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DynamicKeyBoardView.xib; sourceTree = "<group>"; };
 		A5572FAA221B5290001D2704 /* DynamicKeyboardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicKeyboardDelegate.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			children = (
 				8528BC37220C884F00830E7D /* IosPocsTests.swift */,
 				8528BC39220C884F00830E7D /* Info.plist */,
+				A530CEB6221DBB83004F039F /* OTPTokenTest.swift */,
 			);
 			path = IosPocsTests;
 			sourceTree = "<group>";
@@ -227,7 +230,7 @@
 		8528BC51220C894900830E7D /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				A542FE63221DB87200E3C2AB /* otpToken */,
+				A542FE63221DB87200E3C2AB /* OtpToken */,
 				85C33755221B1F8B002E5E7E /* WizardSteps */,
 				8547D6F3220C9D8C00A87D7A /* LoadUsers */,
 				8547D6F2220C9D7000A87D7A /* CustomComponents */,
@@ -556,7 +559,7 @@
 				8528BC2D220C884E00830E7D /* LaunchScreen.storyboard in Resources */,
 				8547D704220CCB7B00A87D7A /* CustomKeyBoardView.xib in Resources */,
 				8547D6FA220C9E5400A87D7A /* Users.storyboard in Resources */,
-				A542FE64221DB87300E3C2AB /* otpToken in Resources */,
+				A542FE64221DB87300E3C2AB /* OtpToken in Resources */,
 				8528BC2A220C884E00830E7D /* Assets.xcassets in Resources */,
 				A5572FA8221B51F3001D2704 /* DynamicKeyBoardView.xib in Resources */,
 				8528BC28220C884C00830E7D /* Main.storyboard in Resources */,
@@ -711,6 +714,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8528BC38220C884F00830E7D /* IosPocsTests.swift in Sources */,
+				A530CEB7221DBB83004F039F /* OTPTokenTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
