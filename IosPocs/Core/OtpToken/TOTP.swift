@@ -82,7 +82,7 @@ public struct TOTP {
     /// Verify time integer is postive
     /// - parameter time: Time since Unix epoch (01 Jan 1970 00:00 UTC)
     /// - returns: Whether time is valid
-    private func validateTime(time: Int) -> Bool {
+    public func validateTime(time: Int) -> Bool {
         return (time > 0)
     }
     

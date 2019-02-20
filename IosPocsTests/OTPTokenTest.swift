@@ -7,29 +7,38 @@
 //
 
 import XCTest
+@testable import IosPocs
 
 class OTPTokenTest: XCTestCase {
     
-    let otpToken = TOTP(secret: data, digits: 6, timeInterval: 30, algorithm: .sha1)
-
+    let data = Data(base64Encoded: "stringAEncriptar")
+    var otp : TOTP!
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        otp = TOTP(secret: data!, digits: 6, timeInterval: 30, algorithm: .sha1)
     }
-
+    
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testOtpNotNilBasicAttributes() {
+        
+        XCTAssertNotNil(otp?.algorithm)
+        XCTAssertNotNil(otp?.digits)
+        XCTAssertNotNil(otp?.timeInterval)
+        
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testCorrectTotpAttrsValues(){
+        
+        XCTAssertEqual(6, otp?.digits)
+        XCTAssertEqual(30, otp?.timeInterval)
+        XCTAssertEqual(.sha1, otp?.algorithm)
     }
-
+    
+    func testValidateOTPTime(){
+        XCTAssertFalse(otp.validateTime(time: 0))
+    }
+    
 }
