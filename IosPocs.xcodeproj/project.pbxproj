@@ -39,14 +39,17 @@
 		85C33763221B20D5002E5E7E /* CustomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3375F221B20D5002E5E7E /* CustomImage.swift */; };
 		85C33764221B20D5002E5E7E /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C33760221B20D5002E5E7E /* CustomView.swift */; };
 		85C33765221B20D5002E5E7E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C33761221B20D5002E5E7E /* CustomTextField.swift */; };
+		85C33767221C65E7002E5E7E /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C33766221C65E7002E5E7E /* UITextField+Extension.swift */; };
 		97E1CB9497A8CB6DF46B54CA /* Pods_IosPocs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E73BCEBC31D7C6D11DDF1F2 /* Pods_IosPocs.framework */; };
+		A542FE5C221DA92000E3C2AB /* OTPAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A542FE5B221DA92000E3C2AB /* OTPAlgorithm.swift */; };
+		A542FE5E221DA9A100E3C2AB /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A542FE5D221DA9A100E3C2AB /* HMAC.swift */; };
+		A542FE60221DA9F500E3C2AB /* TOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A542FE5F221DA9F500E3C2AB /* TOTP.swift */; };
 		A5572FA6221B51EE001D2704 /* DynamicKeyBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5572FA5221B51EE001D2704 /* DynamicKeyBoardViewController.swift */; };
 		A5572FA8221B51F3001D2704 /* DynamicKeyBoardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5572FA7221B51F3001D2704 /* DynamicKeyBoardView.xib */; };
 		A5572FAB221B5290001D2704 /* DynamicKeyboardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5572FAA221B5290001D2704 /* DynamicKeyboardDelegate.swift */; };
 		A5572FAE221B52F2001D2704 /* PasswordPinUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5572FAD221B52F2001D2704 /* PasswordPinUIButton.swift */; };
 		AAE7150D26B8D50B3434CC20 /* Pods_IosPocsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6582D243302DCC276641628F /* Pods_IosPocsTests.framework */; };
 		CCF0A9713A3827A8C12C439F /* Pods_IosPocsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927BEF7704229305BC2519E7 /* Pods_IosPocsUITests.framework */; };
-		FAFFCD071D9ECCADE264C621 /* Pods_CajaPiuraMVPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08848B2E49742BB3BAB0B05B /* Pods_CajaPiuraMVPTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,18 +71,14 @@
 
 /* Begin PBXFileReference section */
 		08848B2E49742BB3BAB0B05B /* Pods_CajaPiuraMVPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CajaPiuraMVPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		132E67133519079606D55C0B /* Pods-CajaPiuraMVPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CajaPiuraMVPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CajaPiuraMVPTests/Pods-CajaPiuraMVPTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1566E753D6E0F84F08F06C05 /* Pods-IosPocsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosPocsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IosPocsTests/Pods-IosPocsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		203289E50F327078C2A1A13E /* Pods-CajaPiuraMVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CajaPiuraMVP.release.xcconfig"; path = "Pods/Target Support Files/Pods-CajaPiuraMVP/Pods-CajaPiuraMVP.release.xcconfig"; sourceTree = "<group>"; };
 		23C77E3FB03A44F500E73743 /* Pods-IosPocsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosPocsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IosPocsTests/Pods-IosPocsTests.release.xcconfig"; sourceTree = "<group>"; };
 		249428E5658255F1C1B86EEF /* Pods-IosPocs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosPocs.release.xcconfig"; path = "Pods/Target Support Files/Pods-IosPocs/Pods-IosPocs.release.xcconfig"; sourceTree = "<group>"; };
-		27963BDC486CED2F67C61339 /* Pods-CajaPiuraMVPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CajaPiuraMVPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CajaPiuraMVPUITests/Pods-CajaPiuraMVPUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2B469D99A4B835A316E6DC7A /* Pods_CajaPiuraMVPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CajaPiuraMVPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6582D243302DCC276641628F /* Pods_IosPocsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosPocsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A822E1D69B4D5373AAF0473 /* Pods_CajaPiuraMVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CajaPiuraMVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B8638C3E57BB1F0A0E862E /* Pods-IosPocsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosPocsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IosPocsUITests/Pods-IosPocsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7E73BCEBC31D7C6D11DDF1F2 /* Pods_IosPocs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosPocs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F21555F7488E1D8ADBB1349 /* Pods-CajaPiuraMVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CajaPiuraMVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CajaPiuraMVP/Pods-CajaPiuraMVP.debug.xcconfig"; sourceTree = "<group>"; };
 		8528BC1F220C884C00830E7D /* IosPocs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosPocs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8528BC22220C884C00830E7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8528BC24220C884C00830E7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,15 +116,17 @@
 		85C3375F221B20D5002E5E7E /* CustomImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomImage.swift; path = IosPocs/Resources/Personalizations/CustomImage.swift; sourceTree = SOURCE_ROOT; };
 		85C33760221B20D5002E5E7E /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomView.swift; path = IosPocs/Resources/Personalizations/CustomView.swift; sourceTree = SOURCE_ROOT; };
 		85C33761221B20D5002E5E7E /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = IosPocs/Resources/Personalizations/CustomTextField.swift; sourceTree = SOURCE_ROOT; };
+		85C33766221C65E7002E5E7E /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		8CFE730A5FC22DFA488C396C /* Pods-IosPocs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosPocs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IosPocs/Pods-IosPocs.debug.xcconfig"; sourceTree = "<group>"; };
 		927BEF7704229305BC2519E7 /* Pods_IosPocsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosPocsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		99655A08960D32BEF3865DD1 /* Pods-CajaPiuraMVPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CajaPiuraMVPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CajaPiuraMVPTests/Pods-CajaPiuraMVPTests.release.xcconfig"; sourceTree = "<group>"; };
+		A542FE5B221DA92000E3C2AB /* OTPAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPAlgorithm.swift; sourceTree = "<group>"; };
+		A542FE5D221DA9A100E3C2AB /* HMAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
+		A542FE5F221DA9F500E3C2AB /* TOTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTP.swift; sourceTree = "<group>"; };
 		A5572FA5221B51EE001D2704 /* DynamicKeyBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicKeyBoardViewController.swift; sourceTree = "<group>"; };
 		A5572FA7221B51F3001D2704 /* DynamicKeyBoardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DynamicKeyBoardView.xib; sourceTree = "<group>"; };
 		A5572FAA221B5290001D2704 /* DynamicKeyboardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicKeyboardDelegate.swift; sourceTree = "<group>"; };
 		A5572FAD221B52F2001D2704 /* PasswordPinUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordPinUIButton.swift; sourceTree = "<group>"; };
 		CC1BBF59AA0B781F83A5D030 /* Pods-IosPocsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosPocsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IosPocsUITests/Pods-IosPocsUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DB230838082BB0863A9317EE /* Pods-CajaPiuraMVPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CajaPiuraMVPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CajaPiuraMVPUITests/Pods-CajaPiuraMVPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +142,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAFFCD071D9ECCADE264C621 /* Pods_CajaPiuraMVPTests.framework in Frameworks */,
 				AAE7150D26B8D50B3434CC20 /* Pods_IosPocsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,9 +225,11 @@
 		8528BC51220C894900830E7D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A542FE5A221DA8DE00E3C2AB /* otpToken */,
 				85C33755221B1F8B002E5E7E /* WizardSteps */,
 				8547D6F3220C9D8C00A87D7A /* LoadUsers */,
 				8547D6F2220C9D7000A87D7A /* CustomComponents */,
+				8528BC26220C884C00830E7D /* Main.storyboard */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -250,6 +252,7 @@
 				8547D70F220E221900A87D7A /* CustomTextFieldView.swift */,
 				8547D71322121A9E00A87D7A /* MessagesView.swift */,
 				8547D7172213399B00A87D7A /* PinUIButton.swift */,
+				85C33766221C65E7002E5E7E /* UITextField+Extension.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -266,7 +269,6 @@
 			isa = PBXGroup;
 			children = (
 				85C33751221B1F37002E5E7E /* WizardSteps.xib */,
-				8528BC26220C884C00830E7D /* Main.storyboard */,
 				8547D703220CCB7B00A87D7A /* CustomKeyBoardView.xib */,
 				8547D70D220E1AD300A87D7A /* CustomTextFieldView.xib */,
 				8547D71122120F6000A87D7A /* MessagesView.xib */,
@@ -366,6 +368,16 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		A542FE5A221DA8DE00E3C2AB /* otpToken */ = {
+			isa = PBXGroup;
+			children = (
+				A542FE5B221DA92000E3C2AB /* OTPAlgorithm.swift */,
+				A542FE5D221DA9A100E3C2AB /* HMAC.swift */,
+				A542FE5F221DA9F500E3C2AB /* TOTP.swift */,
+			);
+			path = otpToken;
+			sourceTree = "<group>";
+		};
 		A5572FA2221B512A001D2704 /* dynamickeyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,12 +424,6 @@
 		D710DA592EB090CA27A5DC47 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7F21555F7488E1D8ADBB1349 /* Pods-CajaPiuraMVP.debug.xcconfig */,
-				203289E50F327078C2A1A13E /* Pods-CajaPiuraMVP.release.xcconfig */,
-				132E67133519079606D55C0B /* Pods-CajaPiuraMVPTests.debug.xcconfig */,
-				99655A08960D32BEF3865DD1 /* Pods-CajaPiuraMVPTests.release.xcconfig */,
-				DB230838082BB0863A9317EE /* Pods-CajaPiuraMVPUITests.debug.xcconfig */,
-				27963BDC486CED2F67C61339 /* Pods-CajaPiuraMVPUITests.release.xcconfig */,
 				8CFE730A5FC22DFA488C396C /* Pods-IosPocs.debug.xcconfig */,
 				249428E5658255F1C1B86EEF /* Pods-IosPocs.release.xcconfig */,
 				1566E753D6E0F84F08F06C05 /* Pods-IosPocsTests.debug.xcconfig */,
@@ -686,16 +692,20 @@
 				A5572FAE221B52F2001D2704 /* PasswordPinUIButton.swift in Sources */,
 				8547D706220CCBA300A87D7A /* CustomKeyBoardView.swift in Sources */,
 				8547D716221234A300A87D7A /* PeopleRepository.swift in Sources */,
+				A542FE5E221DA9A100E3C2AB /* HMAC.swift in Sources */,
 				8547D6F1220C9C0A00A87D7A /* PeopleService.swift in Sources */,
 				8528BC23220C884C00830E7D /* AppDelegate.swift in Sources */,
 				85C33763221B20D5002E5E7E /* CustomImage.swift in Sources */,
 				8547D6FE220C9FA200A87D7A /* PeoplePresenter.swift in Sources */,
 				A5572FAB221B5290001D2704 /* DynamicKeyboardDelegate.swift in Sources */,
 				85C33765221B20D5002E5E7E /* CustomTextField.swift in Sources */,
+				A542FE5C221DA92000E3C2AB /* OTPAlgorithm.swift in Sources */,
 				8547D6EA220C972800A87D7A /* ApiCallManager.swift in Sources */,
 				8547D7182213399B00A87D7A /* PinUIButton.swift in Sources */,
 				A5572FA6221B51EE001D2704 /* DynamicKeyBoardViewController.swift in Sources */,
+				85C33767221C65E7002E5E7E /* UITextField+Extension.swift in Sources */,
 				8547D71B2214674100A87D7A /* WebServicesManager.swift in Sources */,
+				A542FE60221DA9F500E3C2AB /* TOTP.swift in Sources */,
 				8547D6ED220C979F00A87D7A /* Constants.swift in Sources */,
 				8547D70A220CE88C00A87D7A /* CustomKeyBoardPresenter.swift in Sources */,
 				85C3375C221B208D002E5E7E /* WizardSteps.swift in Sources */,
