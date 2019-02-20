@@ -41,6 +41,7 @@ class DynamicKeyboardViewController: UIView {
         setupButtonsList()
     }
     
+    // sets up the button list and add them to the keyboard
     private func setupButtonsList(){
         
         self.view.backgroundColor = UIColor.darkGray
@@ -65,6 +66,7 @@ class DynamicKeyboardViewController: UIView {
         
     }
     
+    // create a uibutton for the keyboard with all its ui attributes
     private func createButton(buttonPosition: Int) -> PasswordPinUIButton {
         
         let buttonDefWidth = UIScreen.main.bounds.width * 0.3
@@ -125,7 +127,7 @@ class DynamicKeyboardViewController: UIView {
     
     @objc private func onKeyPressed(sender: PasswordPinUIButton){
         self.delegate?.onKeyPressed(sender: sender)
-        print("Touched key on position\(sender.position!)")
+        print("Touched key on position \(sender.position!)")
     }
     
     @objc private func onDeleteKeyPressed(sender: UIButton){
@@ -135,7 +137,7 @@ class DynamicKeyboardViewController: UIView {
     // shows the dynamic keyboard if it is hidden
     func show(){
         self.isHidden = false
-        UIView.animate(withDuration: 1.0, delay: 0,
+        UIView.animate(withDuration: 0.5, delay: 0,
                        options: UIView.AnimationOptions.curveEaseIn,
                        animations: {
                         //self.alpha = 1
@@ -148,19 +150,16 @@ class DynamicKeyboardViewController: UIView {
     
     // closes the dynamic keyboard if it is shown
     func close(){
-        if(!self.isHidden){
-            UIView.animate(withDuration: 1.0, delay: 0,
-                           options: UIView.AnimationOptions.curveLinear,
-                           animations: {
-                            self.alpha = 0
-                            self.frame = self.bounds
-            },
-                           completion: {
-                            _ in
-                            self.isHidden = true
-                            
-            })
-        }
+        self.isHidden = true
+        UIView.animate(withDuration: 0.5, delay: 0,
+                       options: UIView.AnimationOptions.curveEaseIn,
+                       animations: {
+                        //self.alpha = 1
+                        self.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height,
+                                            width: UIScreen.main.bounds.size.width, height: CGFloat(220))
+        }, completion:{
+            _ in
+        })
     }
     
 }
