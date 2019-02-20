@@ -15,7 +15,7 @@ class OTPTokenTest: XCTestCase {
     var otp : TOTP!
     
     override func setUp() {
-        otp = TOTP(secret: data!, digits: 6, timeInterval: 30, algorithm: .sha1)
+        otp = TOTP(secret: data!, digits: 6, timeInterval: 60, algorithm: .sha1)
     }
     
     override func tearDown() {
@@ -35,6 +35,12 @@ class OTPTokenTest: XCTestCase {
         XCTAssertEqual(6, otp?.digits)
         XCTAssertEqual(30, otp?.timeInterval)
         XCTAssertEqual(.sha1, otp?.algorithm)
+    }
+    
+    func testTokenGenerated(){
+        // the same secondsPast1970 for testing purposes
+        XCTAssertEqual("769930", otp.generate(secondsPast1970: 10000))
+        
     }
     
     func testValidateOTPTime(){
