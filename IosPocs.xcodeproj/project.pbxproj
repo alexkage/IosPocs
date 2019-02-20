@@ -39,6 +39,7 @@
 		85C33763221B20D5002E5E7E /* CustomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3375F221B20D5002E5E7E /* CustomImage.swift */; };
 		85C33764221B20D5002E5E7E /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C33760221B20D5002E5E7E /* CustomView.swift */; };
 		85C33765221B20D5002E5E7E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C33761221B20D5002E5E7E /* CustomTextField.swift */; };
+<<<<<<< HEAD
 		97E1CB9497A8CB6DF46B54CA /* Pods_IosPocs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E73BCEBC31D7C6D11DDF1F2 /* Pods_IosPocs.framework */; };
 		A5572FA6221B51EE001D2704 /* DynamicKeyBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5572FA5221B51EE001D2704 /* DynamicKeyBoardViewController.swift */; };
 		A5572FA8221B51F3001D2704 /* DynamicKeyBoardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5572FA7221B51F3001D2704 /* DynamicKeyBoardView.xib */; };
@@ -46,6 +47,10 @@
 		A5572FAE221B52F2001D2704 /* PasswordPinUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5572FAD221B52F2001D2704 /* PasswordPinUIButton.swift */; };
 		AAE7150D26B8D50B3434CC20 /* Pods_IosPocsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6582D243302DCC276641628F /* Pods_IosPocsTests.framework */; };
 		CCF0A9713A3827A8C12C439F /* Pods_IosPocsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927BEF7704229305BC2519E7 /* Pods_IosPocsUITests.framework */; };
+=======
+		85C33767221C65E7002E5E7E /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C33766221C65E7002E5E7E /* UITextField+Extension.swift */; };
+		AC547BF9BD6DB305E3D72CB8 /* Pods_CajaPiuraMVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A822E1D69B4D5373AAF0473 /* Pods_CajaPiuraMVP.framework */; };
+>>>>>>> 787b84e25210d27520116aa6f7e5bbef450e6068
 		FAFFCD071D9ECCADE264C621 /* Pods_CajaPiuraMVPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08848B2E49742BB3BAB0B05B /* Pods_CajaPiuraMVPTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -117,8 +122,12 @@
 		85C3375F221B20D5002E5E7E /* CustomImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomImage.swift; path = IosPocs/Resources/Personalizations/CustomImage.swift; sourceTree = SOURCE_ROOT; };
 		85C33760221B20D5002E5E7E /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomView.swift; path = IosPocs/Resources/Personalizations/CustomView.swift; sourceTree = SOURCE_ROOT; };
 		85C33761221B20D5002E5E7E /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = IosPocs/Resources/Personalizations/CustomTextField.swift; sourceTree = SOURCE_ROOT; };
+<<<<<<< HEAD
 		8CFE730A5FC22DFA488C396C /* Pods-IosPocs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosPocs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IosPocs/Pods-IosPocs.debug.xcconfig"; sourceTree = "<group>"; };
 		927BEF7704229305BC2519E7 /* Pods_IosPocsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosPocsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+=======
+		85C33766221C65E7002E5E7E /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+>>>>>>> 787b84e25210d27520116aa6f7e5bbef450e6068
 		99655A08960D32BEF3865DD1 /* Pods-CajaPiuraMVPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CajaPiuraMVPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CajaPiuraMVPTests/Pods-CajaPiuraMVPTests.release.xcconfig"; sourceTree = "<group>"; };
 		A5572FA5221B51EE001D2704 /* DynamicKeyBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicKeyBoardViewController.swift; sourceTree = "<group>"; };
 		A5572FA7221B51F3001D2704 /* DynamicKeyBoardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DynamicKeyBoardView.xib; sourceTree = "<group>"; };
@@ -228,6 +237,7 @@
 				85C33755221B1F8B002E5E7E /* WizardSteps */,
 				8547D6F3220C9D8C00A87D7A /* LoadUsers */,
 				8547D6F2220C9D7000A87D7A /* CustomComponents */,
+				8528BC26220C884C00830E7D /* Main.storyboard */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -250,6 +260,7 @@
 				8547D70F220E221900A87D7A /* CustomTextFieldView.swift */,
 				8547D71322121A9E00A87D7A /* MessagesView.swift */,
 				8547D7172213399B00A87D7A /* PinUIButton.swift */,
+				85C33766221C65E7002E5E7E /* UITextField+Extension.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -266,7 +277,6 @@
 			isa = PBXGroup;
 			children = (
 				85C33751221B1F37002E5E7E /* WizardSteps.xib */,
-				8528BC26220C884C00830E7D /* Main.storyboard */,
 				8547D703220CCB7B00A87D7A /* CustomKeyBoardView.xib */,
 				8547D70D220E1AD300A87D7A /* CustomTextFieldView.xib */,
 				8547D71122120F6000A87D7A /* MessagesView.xib */,
@@ -694,7 +704,11 @@
 				85C33765221B20D5002E5E7E /* CustomTextField.swift in Sources */,
 				8547D6EA220C972800A87D7A /* ApiCallManager.swift in Sources */,
 				8547D7182213399B00A87D7A /* PinUIButton.swift in Sources */,
+<<<<<<< HEAD
 				A5572FA6221B51EE001D2704 /* DynamicKeyBoardViewController.swift in Sources */,
+=======
+				85C33767221C65E7002E5E7E /* UITextField+Extension.swift in Sources */,
+>>>>>>> 787b84e25210d27520116aa6f7e5bbef450e6068
 				8547D71B2214674100A87D7A /* WebServicesManager.swift in Sources */,
 				8547D6ED220C979F00A87D7A /* Constants.swift in Sources */,
 				8547D70A220CE88C00A87D7A /* CustomKeyBoardPresenter.swift in Sources */,

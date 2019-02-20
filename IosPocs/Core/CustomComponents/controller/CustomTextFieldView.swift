@@ -58,6 +58,10 @@ class CustomTextFieldView: UIView, UITextFieldDelegate, KeyBoardDelegate, Dynami
         tap.cancelsTouchesInView = false
         self.addGestureRecognizer(tap)
         textfield0.addGestureRecognizer(tap)
+        
+        let tapLongPresure:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.longPresureAction))
+        tapLongPresure.cancelsTouchesInView = false
+        textfield0.addGestureRecognizer(tapLongPresure)
         disableTextFields()
 
 
@@ -66,6 +70,9 @@ class CustomTextFieldView: UIView, UITextFieldDelegate, KeyBoardDelegate, Dynami
        
     }
 
+    @objc func longPresureAction(){
+        print("lonnnngggggg")
+    }
     
     func addTextFieldsGestures(gesture: UIGestureRecognizer){
         for i in 0..<arrayTextFields.count{
@@ -85,7 +92,7 @@ class CustomTextFieldView: UIView, UITextFieldDelegate, KeyBoardDelegate, Dynami
   
     @objc func tapTexfield(){
         self.delegate?.didTapTextfield()
-          disableTextFields()
+        
     }
     
     func disableTextFields(){

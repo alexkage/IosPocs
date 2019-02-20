@@ -34,7 +34,9 @@
                                     <action selector="showMsg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QHH-4t-l7w"/>
                                 </connections>
                             </button>
+
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e2D-e4-7j0" customClass="DynamicKeyboardViewController" customModule="IosPocs" customModuleProvider="target">
+
                                 <rect key="frame" x="0.0" y="478" width="375" height="189"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
