@@ -32,7 +32,6 @@
 //  THE SOFTWARE.
 
 import Foundation
-import Generator
 
 /// Time-based one time password object
 public struct TOTP {
