@@ -9,6 +9,8 @@
 import XCTest
 
 class OTPTokenTest: XCTestCase {
+    
+    let otpToken = TOTP(secret: data, digits: 6, timeInterval: 30, algorithm: .sha1)
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

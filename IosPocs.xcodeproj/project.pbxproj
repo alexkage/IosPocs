@@ -41,7 +41,9 @@
 		85C33765221B20D5002E5E7E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C33761221B20D5002E5E7E /* CustomTextField.swift */; };
 		97E1CB9497A8CB6DF46B54CA /* Pods_IosPocs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E73BCEBC31D7C6D11DDF1F2 /* Pods_IosPocs.framework */; };
 		A530CEB7221DBB83004F039F /* OTPTokenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530CEB6221DBB83004F039F /* OTPTokenTest.swift */; };
-		A542FE64221DB87300E3C2AB /* OtpToken in Resources */ = {isa = PBXBuildFile; fileRef = A542FE63221DB87200E3C2AB /* OtpToken */; };
+		A530CEC0221DBCF1004F039F /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530CEBC221DBCF1004F039F /* Generator.swift */; };
+		A530CEC1221DBCF1004F039F /* OTPAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530CEBD221DBCF1004F039F /* OTPAlgorithm.swift */; };
+		A530CEC2221DBCF1004F039F /* TOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530CEBE221DBCF1004F039F /* TOTP.swift */; };
 		A5572FA6221B51EE001D2704 /* DynamicKeyBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5572FA5221B51EE001D2704 /* DynamicKeyBoardViewController.swift */; };
 		A5572FA8221B51F3001D2704 /* DynamicKeyBoardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5572FA7221B51F3001D2704 /* DynamicKeyBoardView.xib */; };
 		A5572FAB221B5290001D2704 /* DynamicKeyboardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5572FAA221B5290001D2704 /* DynamicKeyboardDelegate.swift */; };
@@ -123,7 +125,9 @@
 		927BEF7704229305BC2519E7 /* Pods_IosPocsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosPocsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99655A08960D32BEF3865DD1 /* Pods-CajaPiuraMVPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CajaPiuraMVPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CajaPiuraMVPTests/Pods-CajaPiuraMVPTests.release.xcconfig"; sourceTree = "<group>"; };
 		A530CEB6221DBB83004F039F /* OTPTokenTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTokenTest.swift; sourceTree = "<group>"; };
-		A542FE63221DB87200E3C2AB /* OtpToken */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OtpToken; sourceTree = "<group>"; };
+		A530CEBC221DBCF1004F039F /* Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
+		A530CEBD221DBCF1004F039F /* OTPAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPAlgorithm.swift; sourceTree = "<group>"; };
+		A530CEBE221DBCF1004F039F /* TOTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOTP.swift; sourceTree = "<group>"; };
 		A5572FA5221B51EE001D2704 /* DynamicKeyBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicKeyBoardViewController.swift; sourceTree = "<group>"; };
 		A5572FA7221B51F3001D2704 /* DynamicKeyBoardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DynamicKeyBoardView.xib; sourceTree = "<group>"; };
 		A5572FAA221B5290001D2704 /* DynamicKeyboardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicKeyboardDelegate.swift; sourceTree = "<group>"; };
@@ -230,7 +234,7 @@
 		8528BC51220C894900830E7D /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				A542FE63221DB87200E3C2AB /* OtpToken */,
+				A530CEBA221DBCF1004F039F /* OtpToken */,
 				85C33755221B1F8B002E5E7E /* WizardSteps */,
 				8547D6F3220C9D8C00A87D7A /* LoadUsers */,
 				8547D6F2220C9D7000A87D7A /* CustomComponents */,
@@ -370,6 +374,16 @@
 			);
 			name = Personalizations;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A530CEBA221DBCF1004F039F /* OtpToken */ = {
+			isa = PBXGroup;
+			children = (
+				A530CEBC221DBCF1004F039F /* Generator.swift */,
+				A530CEBD221DBCF1004F039F /* OTPAlgorithm.swift */,
+				A530CEBE221DBCF1004F039F /* TOTP.swift */,
+			);
+			path = OtpToken;
 			sourceTree = "<group>";
 		};
 		A5572FA2221B512A001D2704 /* dynamickeyboard */ = {
@@ -559,7 +573,6 @@
 				8528BC2D220C884E00830E7D /* LaunchScreen.storyboard in Resources */,
 				8547D704220CCB7B00A87D7A /* CustomKeyBoardView.xib in Resources */,
 				8547D6FA220C9E5400A87D7A /* Users.storyboard in Resources */,
-				A542FE64221DB87300E3C2AB /* OtpToken in Resources */,
 				8528BC2A220C884E00830E7D /* Assets.xcassets in Resources */,
 				A5572FA8221B51F3001D2704 /* DynamicKeyBoardView.xib in Resources */,
 				8528BC28220C884C00830E7D /* Main.storyboard in Resources */,
@@ -685,6 +698,7 @@
 				8547D710220E221900A87D7A /* CustomTextFieldView.swift in Sources */,
 				8547D6EF220C9A9F00A87D7A /* PeopleModel.swift in Sources */,
 				85C33762221B20D5002E5E7E /* CustomButton.swift in Sources */,
+				A530CEC1221DBCF1004F039F /* OTPAlgorithm.swift in Sources */,
 				8547D6FC220C9EF100A87D7A /* PeopleViewController.swift in Sources */,
 				8528BC25220C884C00830E7D /* ViewController.swift in Sources */,
 				85C33764221B20D5002E5E7E /* CustomView.swift in Sources */,
@@ -704,8 +718,10 @@
 				A5572FA6221B51EE001D2704 /* DynamicKeyBoardViewController.swift in Sources */,
 				8547D71B2214674100A87D7A /* WebServicesManager.swift in Sources */,
 				8547D6ED220C979F00A87D7A /* Constants.swift in Sources */,
+				A530CEC2221DBCF1004F039F /* TOTP.swift in Sources */,
 				8547D70A220CE88C00A87D7A /* CustomKeyBoardPresenter.swift in Sources */,
 				85C3375C221B208D002E5E7E /* WizardSteps.swift in Sources */,
+				A530CEC0221DBCF1004F039F /* Generator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
