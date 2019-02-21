@@ -39,6 +39,9 @@
 		85C33764221B20D5002E5E7E /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C33760221B20D5002E5E7E /* CustomView.swift */; };
 		85C33765221B20D5002E5E7E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C33761221B20D5002E5E7E /* CustomTextField.swift */; };
 		97E1CB9497A8CB6DF46B54CA /* Pods_IosPocs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E73BCEBC31D7C6D11DDF1F2 /* Pods_IosPocs.framework */; };
+		A510E916221EF6840069A7AE /* BankCardsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A510E915221EF6840069A7AE /* BankCardsStoryboard.storyboard */; };
+		A510E91B221F01A70069A7AE /* BankCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A510E91A221F01A70069A7AE /* BankCardCell.swift */; };
+		A510E91D221F02DC0069A7AE /* BankCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A510E91C221F02DC0069A7AE /* BankCardsViewController.swift */; };
 		A530CEB7221DBB83004F039F /* OTPTokenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530CEB6221DBB83004F039F /* OTPTokenTest.swift */; };
 		A530CEC0221DBCF1004F039F /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530CEBC221DBCF1004F039F /* Generator.swift */; };
 		A530CEC1221DBCF1004F039F /* OTPAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530CEBD221DBCF1004F039F /* OTPAlgorithm.swift */; };
@@ -189,6 +192,9 @@
 		85C33761221B20D5002E5E7E /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = IosPocs/Resources/Personalizations/CustomTextField.swift; sourceTree = SOURCE_ROOT; };
 		8CFE730A5FC22DFA488C396C /* Pods-IosPocs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosPocs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IosPocs/Pods-IosPocs.debug.xcconfig"; sourceTree = "<group>"; };
 		927BEF7704229305BC2519E7 /* Pods_IosPocsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosPocsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A510E915221EF6840069A7AE /* BankCardsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BankCardsStoryboard.storyboard; sourceTree = "<group>"; };
+		A510E91A221F01A70069A7AE /* BankCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCardCell.swift; sourceTree = "<group>"; };
+		A510E91C221F02DC0069A7AE /* BankCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCardsViewController.swift; sourceTree = "<group>"; };
 		A530CEB6221DBB83004F039F /* OTPTokenTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTokenTest.swift; sourceTree = "<group>"; };
 		A530CEBC221DBCF1004F039F /* Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 		A530CEBD221DBCF1004F039F /* OTPAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPAlgorithm.swift; sourceTree = "<group>"; };
@@ -328,6 +334,7 @@
 		8528BC21220C884C00830E7D /* IosPocs */ = {
 			isa = PBXGroup;
 			children = (
+				A510E912221EF6370069A7AE /* BankCardsPager */,
 				8547D6EB220C978E00A87D7A /* Resources */,
 				8528BC50220C894200830E7D /* Network */,
 				8528BC51220C894900830E7D /* Core */,
@@ -511,6 +518,40 @@
 			);
 			name = Personalizations;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A510E912221EF6370069A7AE /* BankCardsPager */ = {
+			isa = PBXGroup;
+			children = (
+				A510E919221EFE160069A7AE /* Model */,
+				A510E914221EF64F0069A7AE /* Viewcontroller */,
+				A510E913221EF64A0069A7AE /* View */,
+			);
+			path = BankCardsPager;
+			sourceTree = "<group>";
+		};
+		A510E913221EF64A0069A7AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A510E915221EF6840069A7AE /* BankCardsStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A510E914221EF64F0069A7AE /* Viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				A510E91A221F01A70069A7AE /* BankCardCell.swift */,
+				A510E91C221F02DC0069A7AE /* BankCardsViewController.swift */,
+			);
+			path = Viewcontroller;
+			sourceTree = "<group>";
+		};
+		A510E919221EFE160069A7AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A530CEBA221DBCF1004F039F /* OtpToken */ = {
@@ -813,6 +854,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85C33752221B1F37002E5E7E /* WizardSteps.xib in Resources */,
+				A510E916221EF6840069A7AE /* BankCardsStoryboard.storyboard in Resources */,
 				8528BC2D220C884E00830E7D /* LaunchScreen.storyboard in Resources */,
 				8547D704220CCB7B00A87D7A /* CustomKeyBoardView.xib in Resources */,
 				8547D6FA220C9E5400A87D7A /* Users.storyboard in Resources */,
@@ -970,6 +1012,7 @@
 				85C3375A221B2065002E5E7E /* WizardStepViewController.swift in Sources */,
 				A530CF37221DC03D004F039F /* AES+Foundation.swift in Sources */,
 				A530CF67221DC16E004F039F /* UInt64+Data.swift in Sources */,
+				A510E91B221F01A70069A7AE /* BankCardCell.swift in Sources */,
 				A530CF22221DC03D004F039F /* AEADChaCha20Poly1305.swift in Sources */,
 				A5572FAE221B52F2001D2704 /* PasswordPinUIButton.swift in Sources */,
 				A530CF5E221DC03D004F039F /* BlockMode.swift in Sources */,
@@ -1025,6 +1068,7 @@
 				A530CF1C221DC03D004F039F /* StreamDecryptor.swift in Sources */,
 				A530CF2A221DC03D004F039F /* UInt16+Extension.swift in Sources */,
 				A530CF31221DC03D004F039F /* Blowfish+Foundation.swift in Sources */,
+				A510E91D221F02DC0069A7AE /* BankCardsViewController.swift in Sources */,
 				A530CF59221DC03D004F039F /* CFB.swift in Sources */,
 				A530CF27221DC03D004F039F /* Bit.swift in Sources */,
 				A530CF4B221DC03D004F039F /* BlockDecryptor.swift in Sources */,
